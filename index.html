@@ -21,9 +21,9 @@
     <a class="brand" href="#top" aria-label="Home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none"><path d="M5 27 L28 5"/><path d="M5 27 L29 11"/><path d="M5 27 L29 17"/><path d="M5 27 L28 23"/><path d="M5 27 L24 27"/></g><circle cx="5" cy="27" r="2.6" fill="currentColor"/><circle cx="28" cy="5" r="1.6" fill="currentColor"/><circle cx="29" cy="17" r="1.6" fill="currentColor"/><circle cx="24" cy="27" r="1.6" fill="currentColor"/></svg></a>
     <ul id="navlinks">
       <li><a href="#news">News</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#awards">Awards</a></li>
       <li><a href="#talks">Talks</a></li>
       <li><a href="#mentoring">Mentoring</a></li>
@@ -92,6 +92,64 @@
     <li class="more"><time>Oct 2024</time><span>Lightning talk and poster at <b>Fast Machine Learning for Science 2024</b>, Purdue.</span></li>
   </ul>
   <button class="toggle" onclick="var n=document.getElementById('newslist');n.classList.toggle('expanded');this.textContent=n.classList.contains('expanded')?'Show less':'Show all'">Show all</button>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="item">
+    <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
+    <div class="when">Jan 2026 – Present</div>
+    <ul>
+      <li>Research whether LLM agents can follow a wall-clock time budget on long-horizon tasks and use that time effectively, including time in tool calls and code execution that the model cannot measure from its own output.</li>
+      <li>Built time-budgeted evaluations in Factorio and MLE-bench; showed agents meet deadlines but use about a quarter of their budget, and that a live clock raises output 77% with no missed deadlines.</li>
+      <li>Trained agents with GRPO and a deadline reward to follow the budget and adapt strategy to its length; introduced trajectory grafting; modified the architecture to encode elapsed time (on-time completion 6% → 50%).</li>
+      <li>Scaled training to multi-node GPU clusters with hundreds of parallel environments, including a 27B-parameter model trained across AWS regions.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div><span class="org">Fermi National Accelerator Laboratory</span> · Batavia, IL<br><span class="role">Graduate Research Fellow</span></div>
+    <div class="when">Jun 2023 – Present</div>
+    <ul>
+      <li>Member and author of the CMS Collaboration at the CERN Large Hadron Collider.</li>
+      <li>Designed efficient transformer architectures for jet classification, including a physics-inspired linear transformer that uses 80% less memory and runs faster while matching state-of-the-art accuracy.</li>
+      <li>Analyzed attention maps and weight distributions to explain attention sparsity in particle transformers; used the sparsity to improve efficiency.</li>
+      <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
+    <div class="when">Sep 2025 – Dec 2025</div>
+    <ul>
+      <li>Tested whether evolutionary prompt optimizers (GEPA, EvoPrompt) improve LLM accuracy on math and reasoning across Qwen3, GPT-OSS and Claude models, with statistical tests on accuracy and pass@k.</li>
+      <li>Analyzed token likelihoods along chain-of-thought trajectories to locate failure points in LLM math reasoning.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div><span class="org">University of Washington Particle Physics Group</span> · Seattle, WA<br><span class="role">Research Assistant</span></div>
+    <div class="when">Jun 2020 – Jul 2022</div>
+    <ul>
+      <li>Jet classification with state-of-the-art ML models (99% accuracy); autoencoder and GAN anomaly detection at the LHC trigger; quantized RNNs for FPGA deployment with hls4ml.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div><span class="org">Pacific Northwest National Laboratory</span> · Richland, WA<br><span class="role">Machine Learning Research Intern</span></div>
+    <div class="when">Jul – Sep 2021</div>
+    <ul><li>Few-shot models for materials solubility prediction; error analysis by molecule type; cut input features 30% with no loss in accuracy.</li></ul>
+  </div>
+  <div class="item">
+    <div><span class="org">IRIS-HEP</span> · New York, NY<br><span class="role">Research Fellow</span></div>
+    <div class="when">Jan 2021 – Jun 2022</div>
+    <ul><li>Extended the Reproducible Open Benchmarks (ROB) platform to run Jupyter notebooks, with NYU computer science and physics faculty.</li></ul>
+  </div>
+  <h2 style="margin-top:28px">Education</h2>
+  <div class="item">
+    <div><span class="org">University of Illinois Chicago</span><br><span class="role">Ph.D., Physics</span></div>
+    <div class="when">2022 – Present</div>
+  </div>
+  <div class="item">
+    <div><span class="org">University of Washington</span><br><span class="role">B.S., Comprehensive Physics</span></div>
+    <div class="when">2018 – 2022</div>
+  </div>
 </div></section>
 
 <section id="research"><div class="wrap">
@@ -228,64 +286,6 @@
         <div class="links"><a class="btn" href="https://github.com/aaronw5/Cryo-Transistor-ML" target="_blank" rel="noopener">Code</a></div>
       </div>
     </div>
-  </div>
-</div></section>
-
-<section id="experience"><div class="wrap">
-  <h2>Experience</h2>
-  <div class="item">
-    <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
-    <div class="when">Jan 2026 – Present</div>
-    <ul>
-      <li>Research whether LLM agents can follow a wall-clock time budget on long-horizon tasks and use that time effectively, including time in tool calls and code execution that the model cannot measure from its own output.</li>
-      <li>Built time-budgeted evaluations in Factorio and MLE-bench; showed agents meet deadlines but use about a quarter of their budget, and that a live clock raises output 77% with no missed deadlines.</li>
-      <li>Trained agents with GRPO and a deadline reward to follow the budget and adapt strategy to its length; introduced trajectory grafting; modified the architecture to encode elapsed time (on-time completion 6% → 50%).</li>
-      <li>Scaled training to multi-node GPU clusters with hundreds of parallel environments, including a 27B-parameter model trained across AWS regions.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div><span class="org">Fermi National Accelerator Laboratory</span> · Batavia, IL<br><span class="role">Graduate Research Fellow</span></div>
-    <div class="when">Jun 2023 – Present</div>
-    <ul>
-      <li>Member and author of the CMS Collaboration at the CERN Large Hadron Collider.</li>
-      <li>Designed efficient transformer architectures for jet classification, including a physics-inspired linear transformer that uses 80% less memory and runs faster while matching state-of-the-art accuracy.</li>
-      <li>Analyzed attention maps and weight distributions to explain attention sparsity in particle transformers; used the sparsity to improve efficiency.</li>
-      <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
-    <div class="when">Sep 2025 – Dec 2025</div>
-    <ul>
-      <li>Tested whether evolutionary prompt optimizers (GEPA, EvoPrompt) improve LLM accuracy on math and reasoning across Qwen3, GPT-OSS and Claude models, with statistical tests on accuracy and pass@k.</li>
-      <li>Analyzed token likelihoods along chain-of-thought trajectories to locate failure points in LLM math reasoning.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div><span class="org">University of Washington Particle Physics Group</span> · Seattle, WA<br><span class="role">Research Assistant</span></div>
-    <div class="when">Jun 2020 – Jul 2022</div>
-    <ul>
-      <li>Jet classification with state-of-the-art ML models (99% accuracy); autoencoder and GAN anomaly detection at the LHC trigger; quantized RNNs for FPGA deployment with hls4ml.</li>
-    </ul>
-  </div>
-  <div class="item">
-    <div><span class="org">Pacific Northwest National Laboratory</span> · Richland, WA<br><span class="role">Machine Learning Research Intern</span></div>
-    <div class="when">Jul – Sep 2021</div>
-    <ul><li>Few-shot models for materials solubility prediction; error analysis by molecule type; cut input features 30% with no loss in accuracy.</li></ul>
-  </div>
-  <div class="item">
-    <div><span class="org">IRIS-HEP</span> · New York, NY<br><span class="role">Research Fellow</span></div>
-    <div class="when">Jan 2021 – Jun 2022</div>
-    <ul><li>Extended the Reproducible Open Benchmarks (ROB) platform to run Jupyter notebooks, with NYU computer science and physics faculty.</li></ul>
-  </div>
-  <h2 style="margin-top:28px">Education</h2>
-  <div class="item">
-    <div><span class="org">University of Illinois Chicago</span><br><span class="role">Ph.D., Physics</span></div>
-    <div class="when">2022 – Present</div>
-  </div>
-  <div class="item">
-    <div><span class="org">University of Washington</span><br><span class="role">B.S., Comprehensive Physics</span></div>
-    <div class="when">2018 – 2022</div>
   </div>
 </div></section>
 
