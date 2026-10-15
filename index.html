@@ -68,7 +68,7 @@
 <section id="news"><div class="wrap">
   <h2>News</h2>
   <ul class="news" id="newslist">
-    <li><time>Oct 2026</time><span><a href="#p-clock">On the Clock</a> accepted at the <b>NeurIPS 2026 Workshop on Resource-Aware Agentic AI</b>.</span></li>
+    <li><time>Oct 2026</time><span><a href="#p-clock">On the Clock</a> accepted at the <b>Resource-Aware Agentic AI Workshop @ NeurIPS 2026</b>.</span></li>
     <li><time>Oct 2026</time><span>Mentored project on <a href="#p-moe">MoE routing in particle transformers</a> is on arXiv, with Kaushik, Haris, Trevin, and Timothy as lead authors.</span></li>
     <li><time>Sep 2026</time><span><a href="#p-phat">PHAT-JeT</a> accepted at <b>NeurIPS 2026</b>.</span></li>
     <li><time>Sep 2026</time><span><a href="#p-sim2sci">Surrogate-assisted cryogenic compact-model extraction</a> accepted at the <b>Sim2Sci Workshop @ NeurIPS 2026</b>.</span></li>
@@ -77,11 +77,11 @@
     <li><time>2026</time><span>Awarded the <b>DOE SCGSR</b> fellowship.</span></li>
     <li class="more"><time>Mar 2026</time><span>Talk at the <b>Fermilab AI Seminar Series</b>: Efficient and Interpretable Transformers for Jet Tagging.</span></li>
     <li class="more"><time>Jan 2026</time><span>Back at <b>AWS Fundamental AI Research</b> (NYC) for a second internship, on time-budgeted LLM agents.</span></li>
-    <li class="more"><time>Dec 2025</time><span>Poster on <a href="#p-sparse">attention sparsity in ParT</a> at <b>ML4PS @ NeurIPS 2025</b>.</span></li>
+    <li class="more"><time>Dec 2025</time><span>Poster on <a href="#p-sparse">attention sparsity in ParT</a> at <b>ML4PS Workshop @ NeurIPS 2025</b>.</span></li>
     <li class="more"><time>Oct 2025</time><span><a href="#p-salt">SAL-T</a> preprint on arXiv.</span></li>
     <li class="more"><time>Sep 2025</time><span>Poster at <b>ACAT 2025</b>, Hamburg; started at <b>AWS Fundamental AI Research</b>.</span></li>
     <li class="more"><time>2025</time><span>Named a <b>URA Visiting Scholar</b> at Fermilab.</span></li>
-    <li class="more"><time>Dec 2024</time><span>Poster on <a href="#p-interp">interpreting transformers for jet tagging</a> at <b>ML4PS @ NeurIPS 2024</b>.</span></li>
+    <li class="more"><time>Dec 2024</time><span>Poster on <a href="#p-interp">interpreting transformers for jet tagging</a> at <b>ML4PS Workshop @ NeurIPS 2024</b>.</span></li>
     <li class="more"><time>Oct 2024</time><span>Lightning talk and poster at <b>Fast Machine Learning for Science 2024</b>, Purdue.</span></li>
   </ul>
   <button class="toggle" onclick="var n=document.getElementById('newslist');n.classList.toggle('expanded');this.textContent=n.classList.contains('expanded')?'Show less':'Show all'">Show all</button>
@@ -93,7 +93,7 @@
   <article class="paper" id="p-clock">
     <img class="fig contain" src="assets/figs/clock.png" alt="Quality vs. wall-clock time used by an LLM agent on MLE-bench under different budgets">
     <div>
-      <div class="meta"><span class="tag venue">NeurIPS 2026 Workshop · Resource-Aware Agentic AI</span><span class="tag role">First author</span></div>
+      <div class="meta"><span class="tag venue">Resource-Aware Agentic AI Workshop @ NeurIPS 2026</span><span class="tag role">First author</span></div>
       <h3><a href="https://arxiv.org/abs/2610.10833" target="_blank" rel="noopener">On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents</a></h3>
       <p class="authors"><b>Aaron Wang</b>, Neelabh Madan, Vlad Sobal, Matthew Trager, Michael Kleinman, Elman Mansimov, Wei Xia, Stefano Soatto</p>
       <p class="desc">Can an LLM agent follow a wall-clock budget and use the time well? Given only a deadline, agents in Factorio and MLE-bench stopped after using about a quarter of their budget. A live clock recovered most of the lost output. We then train agents with GRPO and a deadline reward, introduce <i>trajectory grafting</i> to splice rollouts across budgets, and add a time-aware architecture that raises on-time completion from 6% to 50%.</p>
@@ -126,7 +126,7 @@
   <article class="paper" id="p-sparse">
     <img class="fig contain" src="assets/figs/sparse.png" alt="Attention score distributions showing near-binary attention in ParT">
     <div>
-      <div class="meta"><span class="tag venue">ML4PS @ NeurIPS 2025</span><span class="tag role">Mentored project · second author</span></div>
+      <div class="meta"><span class="tag venue">ML4PS Workshop @ NeurIPS 2025</span><span class="tag role">Mentored project · second author</span></div>
       <h3><a href="https://arxiv.org/abs/2512.00210" target="_blank" rel="noopener">Why Is Attention Sparse in Particle Transformer?</a></h3>
       <p class="authors">Timothy Legge, <b>Aaron Wang</b>, Jacob Ortiz, Victor Limouzi, Zihan Zhao, Abhijith Gandrakota, Elham E. Khoda, Jennifer Ngadiuba, Javier Duarte, Richard Cavanaugh</p>
       <p class="desc">ParT's attention is nearly binary. We separate two candidate causes, the attention mechanism and the physics-inspired interaction matrix, and find the attention mechanism is the main driver. ParT also picks out leptons from semileptonic top decays without any particle-ID input.</p>
@@ -137,7 +137,7 @@
   <article class="paper" id="p-interp">
     <img class="fig contain" src="assets/figs/interp.jpg" alt="Attention map of a particle transformer head on a top-quark jet">
     <div>
-      <div class="meta"><span class="tag venue">ML4PS @ NeurIPS 2024</span><span class="tag role">First author</span></div>
+      <div class="meta"><span class="tag venue">ML4PS Workshop @ NeurIPS 2024</span><span class="tag role">First author</span></div>
       <h3><a href="https://arxiv.org/abs/2412.03673" target="_blank" rel="noopener">Interpreting Transformers for Jet Tagging</a></h3>
       <p class="authors"><b>Aaron Wang</b>, Abhijith Gandrakota, Jennifer Ngadiuba, Vivekanand Sahu, Priyansh Bhatnagar, Elham E. Khoda, Javier Duarte</p>
       <p class="desc">Attention maps and particle-pair correlations on the η–φ plane show that each particle attends to at most one other, and that which particles and subjets the model focuses on depends on the decay. The model appears to learn traditional jet substructure observables on its own.</p>
@@ -297,11 +297,11 @@
       <h2>Posters</h2>
       <ul class="plain">
         <li>PHAT-JeT · <b>NeurIPS 2026</b></li>
-        <li>On the Clock · <b>NeurIPS 2026 Workshop on Resource-Aware Agentic AI</b></li>
-        <li>Cryogenic compact-model extraction · <b>Sim2Sci @ NeurIPS 2026</b></li>
-        <li>Why Is Attention Sparse in ParT? · <b>ML4PS @ NeurIPS 2025</b></li>
+        <li>On the Clock · <b>Resource-Aware Agentic AI Workshop @ NeurIPS 2026</b></li>
+        <li>Cryogenic compact-model extraction · <b>Sim2Sci Workshop @ NeurIPS 2026</b></li>
+        <li>Why Is Attention Sparse in ParT? · <b>ML4PS Workshop @ NeurIPS 2025</b></li>
         <li>Efficient Transformer Architectures for Jet Tagging · <a href="https://indico.cern.ch/event/1488410/contributions/6561486" target="_blank" rel="noopener"><b>ACAT 2025</b></a>, Hamburg</li>
-        <li>Interpreting Transformers for Jet Tagging · <b>ML4PS @ NeurIPS 2024</b></li>
+        <li>Interpreting Transformers for Jet Tagging · <b>ML4PS Workshop @ NeurIPS 2024</b></li>
         <li>Interpreting and Accelerating Transformers · <a href="https://indico.cern.ch/event/1387540/contributions/6153602" target="_blank" rel="noopener"><b>FastML 2024</b></a>, Purdue</li>
       </ul>
     </div>
@@ -319,7 +319,7 @@
         <li><b>Trevin Lee</b> · mixture-of-experts particle transformers · 2025–present</li>
         <li><b>Haris Zia</b> · switch particle transformers · 2025–present</li>
       </ul>
-      <p class="small muted" style="margin-top:10px">Three of these projects became papers: attention sparsity (ML4PS 2025) and MoE routing (arXiv 2026).</p>
+      <p class="small muted" style="margin-top:10px">Three of these projects became papers: attention sparsity (ML4PS Workshop @ NeurIPS 2025) and MoE routing (arXiv 2026).</p>
     </div>
     <div>
       <h2>Awards</h2>
