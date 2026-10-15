@@ -343,10 +343,12 @@
   <span>© 2026 Aaron Wang · <a href="mailto:aaronw5@uic.edu">aaronw5@uic.edu</a></span>
 </div></footer>
 <script>
-(function(){var r=document.documentElement,b=document.getElementById('themebtn');
-function set(t){r.setAttribute('data-theme',t);b.textContent=t==='dark'?'☀':'☾';try{localStorage.setItem('theme',t)}catch(e){}}
-var t='light';try{t=localStorage.getItem('theme')||'light'}catch(e){}set(t);
-b.onclick=function(){set(r.getAttribute('data-theme')==='dark'?'light':'dark')};})();
+(function(){var r=document.documentElement,b=document.getElementById('themebtn'),mq=matchMedia('(prefers-color-scheme: dark)');
+function cur(){var t=r.getAttribute('data-theme');return t||(mq.matches?'dark':'light')}
+function paint(){b.textContent=cur()==='dark'?'☀':'☾'}
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+paint();mq.addEventListener('change',paint);
+b.onclick=function(){var t=cur()==='dark'?'light':'dark';r.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}paint()};})();
 </script>
 </body>
 </html>
