@@ -19,7 +19,6 @@
 <nav class="nav">
   <div class="wrap">
     <a class="brand" href="#top">Aaron Wang</a>
-    <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">Menu</button>
     <ul id="navlinks">
       <li><a href="#news">News</a></li>
       <li><a href="#research">Research</a></li>
@@ -29,6 +28,10 @@
       <li><a href="#mentoring">Mentoring</a></li>
       <li><a href="assets/Aaron_Wang_CV.pdf" target="_blank" rel="noopener">CV</a></li>
     </ul>
+    <div class="navright">
+      <button class="theme-btn" id="themebtn" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+      <button class="menu-btn" aria-label="Menu" onclick="document.getElementById('navlinks').classList.toggle('open')">Menu</button>
+    </div>
   </div>
 </nav>
 
@@ -59,6 +62,8 @@
         <a class="btn" href="https://scholar.google.com/citations?user=0EXdRdAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
         <a class="btn" href="https://github.com/aaronw5" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="https://www.linkedin.com/in/aaron-wang-80aba3177" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://inspirehep.net/authors/2860831" target="_blank" rel="noopener">INSPIRE-HEP</a>
+        <a class="btn" href="https://orcid.org/0000-0003-2136-9758" target="_blank" rel="noopener">ORCID</a>
       </div>
     </div>
     <img class="photo" src="assets/profile.jpg" alt="Aaron Wang" width="240" height="240">
@@ -336,8 +341,12 @@
 
 <footer><div class="wrap">
   <span>© 2026 Aaron Wang · <a href="mailto:aaronw5@uic.edu">aaronw5@uic.edu</a></span>
-  <button class="theme-btn" onclick="var r=document.documentElement;var d=r.getAttribute('data-theme')==='dark'||(!r.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme: dark)').matches);r.setAttribute('data-theme',d?'light':'dark');try{localStorage.setItem('theme',d?'light':'dark')}catch(e){}">Toggle theme</button>
 </div></footer>
-<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('themebtn');
+function set(t){r.setAttribute('data-theme',t);b.textContent=t==='dark'?'☀':'☾';try{localStorage.setItem('theme',t)}catch(e){}}
+var t='light';try{t=localStorage.getItem('theme')||'light'}catch(e){}set(t);
+b.onclick=function(){set(r.getAttribute('data-theme')==='dark'?'light':'dark')};})();
+</script>
 </body>
 </html>
