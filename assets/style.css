@@ -76,6 +76,12 @@ section { padding: 36px 0; }
   box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent); }
 .hero .jet { position: absolute; right: -40px; top: -20px; width: 520px; height: 360px; pointer-events: none; opacity: .55; z-index: 0; }
 .hero .wrap { position: relative; z-index: 1; }
+.honors { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 14px; }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border-radius: 999px; font-size: .8rem; font-weight: 500;
+  color: var(--fg-muted); background: var(--bg-soft); border: 1px solid var(--line); text-decoration: none; }
+.chip:hover { color: var(--accent-ink); border-color: var(--accent); text-decoration: none; }
+.chip .ico { color: var(--accent); font-size: .7rem; }
+.chip .yr { color: var(--fg-muted); opacity: .75; font-variant-numeric: tabular-nums; }
 .callout { display: inline-flex; align-items: center; gap: 10px; background: var(--accent-soft); color: var(--accent-ink);
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 999px; padding: 6px 14px; font-size: .92rem; font-weight: 600; margin: 4px 0 16px; }
 .callout .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
