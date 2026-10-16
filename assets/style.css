@@ -68,12 +68,12 @@ section { padding: 36px 0; }
 
 /* hero */
 .hero { position: relative; padding: 48px 0 32px; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: 1fr 270px; gap: 32px; align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: center; }
 .hero h1 { font-size: 2.5rem; font-weight: 800; }
 .hero .tagline { color: var(--fg-muted); font-size: 1.05rem; margin: 8px 0 4px; }
 .hero .fellow { color: var(--fg-muted); font-size: .92rem; margin: 0 0 16px; }
 .hero .fellow a { color: var(--accent-ink); font-weight: 600; }
-.hero .photo { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; justify-self: end;
+.hero .photo { width: 290px; height: 290px; border-radius: 50%; object-fit: cover; justify-self: end;
   box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent); }
 .hero .jet { position: absolute; right: -40px; top: -20px; width: 520px; height: 360px; pointer-events: none; opacity: .55; z-index: 0; }
 .hero .wrap { position: relative; z-index: 1; }
