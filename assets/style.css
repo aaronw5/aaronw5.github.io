@@ -68,12 +68,12 @@ section { padding: 36px 0; }
 
 /* hero */
 .hero { position: relative; padding: 48px 0 32px; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: 1fr 260px; gap: 40px; align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 270px; gap: 32px; align-items: center; }
 .hero h1 { font-size: 2.5rem; font-weight: 800; }
 .hero .tagline { color: var(--fg-muted); font-size: 1.05rem; margin: 8px 0 4px; }
 .hero .fellow { color: var(--fg-muted); font-size: .92rem; margin: 0 0 16px; }
 .hero .fellow a { color: var(--accent-ink); font-weight: 600; }
-.hero .photo { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; justify-self: end;
+.hero .photo { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; justify-self: end;
   box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent); }
 .hero .jet { position: absolute; right: -40px; top: -20px; width: 520px; height: 360px; pointer-events: none; opacity: .55; z-index: 0; }
 .hero .wrap { position: relative; z-index: 1; }
@@ -87,8 +87,9 @@ section { padding: 36px 0; }
   border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 999px; padding: 6px 14px; font-size: .92rem; font-weight: 600; margin: 4px 0 16px; }
 .callout .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent); }
 .links { display: flex; flex-wrap: wrap; gap: 8px; }
-.btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 10px; border: 1px solid var(--line);
-  background: var(--card); color: var(--fg); font-size: .92rem; font-weight: 500; box-shadow: var(--shadow); }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 10px; border: 1px solid var(--line);
+  background: var(--card); color: var(--fg); font-size: .88rem; font-weight: 500; box-shadow: var(--shadow); white-space: nowrap; }
+.hero .links { gap: 6px; }
 .btn:hover { border-color: var(--accent); color: var(--accent-ink); text-decoration: none; }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
 .btn.primary:hover { color: #fff; filter: brightness(1.05); }
