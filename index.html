@@ -115,7 +115,7 @@
       <li>Design efficient transformer architectures for real-time jet classification at the LHC trigger: a physics-inspired linear transformer that uses 80% less memory than full attention at matching accuracy, and a hierarchical patch-attention model with geometric message passing that reaches state-of-the-art accuracy among resource-constrained taggers (NeurIPS 2026).</li>
       <li>Built mixture-of-experts particle transformers and showed that routing each particle to a single expert beats a dense model of the same compute on a 188-class jet classification benchmark.</li>
       <li>Measured attention patterns in jet-tagging transformers: each particle attends to at most one other, and the pattern arises from the attention mechanism rather than the physics-inspired bias term. Rewrote the hidden layers of a deployed tagger as if-statements on physical jet quantities; the formulas reproduce the network's decisions on 94% of jets.</li>
-      <li>Deployed transformer models on FPGAs for the CMS Level-1 trigger: quantization-aware training and high-level synthesis to bit-exact RTL, reaching sub-100 ns inference within 10% of the device's logic budget.</li>
+      <li>Deployed transformer models on FPGAs for the CMS Level-1 trigger through quantization-aware training and high-level synthesis, reaching sub-100 ns inference within 10% of the device's logic budget.</li>
       <li>Built a hardware-aware neural architecture search that uses learned models of FPGA resource use and latency to find designs that fit the trigger budget (AutoML 2026).</li>
       <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
     </ul>
@@ -126,7 +126,7 @@
     <ul>
       <li>Tested whether automatic prompt optimizers (GEPA, MIPROv2, APE), which rewrite an LLM's prompt from its own feedback, improve reasoning or only change output formatting and inject memorized facts.</li>
       <li>Evaluated each optimized prompt over repeated runs with statistical tests across GPT-OSS, Claude Sonnet and Qwen3 on AIME math, BigBench Extra Hard and HotpotQA.</li>
-      <li>Found no significant accuracy gain on 16 of 24 BigBench tasks; of the 8 that improved, 5 were explained by formatting and 2 by memorized facts, leaving 1 with a reasoning gain. Removing those facts from the prompt returned accuracy to the formatting-only level.</li>
+      <li>Found no significant accuracy gain on 16 of 24 BigBench tasks; of the 8 that improved, 5 were explained by formatting and 2 by memorized facts, leaving 1 with a reasoning gain. Removing those facts from the prompts dropped accuracy back to the formatting-only level.</li>
     </ul>
   </div>
   <div class="item">
