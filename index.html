@@ -187,9 +187,9 @@
     <img class="fig contain" src="assets/figs/cryo.png" alt="Measured and fitted 77 K transistor I-V curves">
     <div class="body">
       <div class="meta"><a class="tag venue" href="https://www.sim2science.com/" target="_blank" rel="noopener">Sim2Sci Workshop @ NeurIPS 2026</a><span class="tag role">First author</span></div>
-      <h3>Surrogate Assisted Compact Model Extraction for Commercial CMOS Process Operating at Cryogenic Temperatures</h3>
+      <h3>Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K</h3>
       <p class="authors"><b>Aaron Wang</b>, et al.</p>
-      <p class="desc">Neural network surrogates of transistor current-voltage curves, used to search for compact-model parameters at 77 K with every candidate checked in circuit simulation. The method lowers fitting error against the published parameters on all 18 test devices of an open-source 130 nm process.</p>
+      <p class="desc">A neural surrogate of the NGSpice circuit simulator, trained on simulated current-voltage curves, guides a bounded search for BSIM4 compact-model parameters that fit measured 77 K data on 18 SKY130 transistor geometries. Candidates are re-simulated in NGSpice before selection. Searches over 7 and 43 parameters lower fitting error against the released cards by 17% and 26%.</p>
       <div class="links"><a class="btn" href="https://github.com/aaronw5/Cryo-Transistor-ML" target="_blank" rel="noopener">Code</a></div>
     </div>
   </article>
