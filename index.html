@@ -121,8 +121,9 @@
     <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
     <div class="when">Sep 2025 – Dec 2025</div>
     <ul>
-      <li>Tested whether evolutionary prompt optimizers (GEPA, EvoPrompt) improve LLM accuracy on math and reasoning across Qwen3, GPT-OSS and Claude models, with statistical tests on accuracy and pass@k.</li>
-      <li>Analyzed token likelihoods along chain-of-thought trajectories to locate failure points in LLM math reasoning.</li>
+      <li>Studied whether reflective prompt optimizers (GEPA, MIPROv2, APE) improve LLM reasoning or only elicit formatting and memorized facts, with repeated-run statistical testing across GPT-OSS, Claude Sonnet and Qwen3 on AIME, BigBench Extra Hard and HotpotQA.</li>
+      <li>Showed that 16 of 24 BigBench tasks did not improve; nearly all remaining gains came from formatting or memorized context (movie lists, capital cities), with one task showing a reasoning gain.</li>
+      <li>Ablating the memorized context returned accuracy to the formatting-only baseline; stratifying math data by problem type did not help (0 of 272 GEPA prompts improved).</li>
     </ul>
   </div>
   <div class="item">
