@@ -68,13 +68,13 @@ section { padding: 36px 0; }
 
 /* hero */
 .hero { position: relative; padding: 48px 0 32px; overflow: hidden; }
-.hero .wrap { display: grid; grid-template-columns: 1fr 300px; gap: 32px; align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: 1fr 280px; gap: 36px; align-items: center; }
 .hero h1 { font-size: 2.5rem; font-weight: 800; }
 .hero .tagline { color: var(--fg-muted); font-size: 1.05rem; margin: 8px 0 4px; }
 .hero .fellow { color: var(--fg-muted); font-size: .92rem; margin: 0 0 16px; }
 .hero .fellow a { color: var(--accent-ink); font-weight: 600; }
-.hero .photo { width: 290px; height: 290px; border-radius: 50%; object-fit: cover; justify-self: end;
-  box-shadow: 0 0 0 6px var(--bg), 0 0 0 8px var(--accent); }
+.hero .photo { width: 270px; height: 360px; border-radius: 18px; object-fit: cover; justify-self: end;
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--accent), var(--shadow); }
 .hero .jet { position: absolute; right: -40px; top: -20px; width: 520px; height: 360px; pointer-events: none; opacity: .55; z-index: 0; }
 .hero .wrap { position: relative; z-index: 1; }
 .honors { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 14px; }
@@ -96,7 +96,7 @@ section { padding: 36px 0; }
 @media (max-width: 720px) {
   .hero { padding-top: 28px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 20px; }
-  .hero .photo { width: 150px; height: 150px; justify-self: start; order: -1; }
+  .hero .photo { width: 180px; height: 240px; justify-self: start; order: -1; }
   .hero h1 { font-size: 2rem; }
   .hero .jet { width: 420px; right: -230px; top: -110px; opacity: .3; }
 }
