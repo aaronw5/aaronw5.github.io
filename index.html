@@ -103,7 +103,7 @@
     <ul>
       <li>Research whether LLM agents can follow a wall-clock time budget on long-horizon tasks and use that time effectively, including time in tool calls and code execution that the model cannot measure from its own output.</li>
       <li>Built time-budgeted evaluations in Factorio and MLE-bench; showed agents meet deadlines but use about a quarter of their budget, and that a live clock raises output 77% with no missed deadlines.</li>
-      <li>Trained agents with GRPO and a deadline reward to follow the budget and adapt strategy to its length; introduced trajectory grafting; modified the architecture to encode elapsed time (on-time completion 6% → 50%).</li>
+      <li>Trained agents with reinforcement learning (GRPO) and a deadline reward to follow the budget and adapt strategy to its length; introduced trajectory grafting; modified the architecture to encode elapsed time (on-time completion 6% → 50%).</li>
       <li>Scaled training to multi-node GPU clusters with hundreds of parallel environments, including a 27B-parameter model trained across AWS regions.</li>
     </ul>
   </div>
@@ -113,8 +113,8 @@
     <ul>
       <li>Member and author of the CMS Collaboration at the CERN Large Hadron Collider.</li>
       <li>Design efficient transformer architectures for real-time jet classification at the LHC trigger: a physics-inspired linear transformer that uses 80% less memory than full attention at matching accuracy, and a hierarchical patch-attention model with geometric message passing that reaches state-of-the-art accuracy among resource-constrained taggers (NeurIPS 2026).</li>
-      <li>Mixture-of-experts particle transformers: top-1 routing beats a dense baseline at the same forward compute on 188-class jet classification; stored capacity, active compute and routing organization must be evaluated separately.</li>
-      <li>Interpretability of jet taggers: traced near-binary attention in particle transformers to the attention mechanism rather than the interaction matrix; distilled the latent space of FPGA-deployable and transformer taggers into if-statements on jet physics quantities that reproduce the network's decisions on 94% of jets.</li>
+      <li>Built mixture-of-experts particle transformers and showed that routing each particle to a single expert beats a dense model of the same compute on a 188-class jet classification benchmark.</li>
+      <li>Explained what jet-tagging transformers learn: showed that their attention is nearly binary (each particle attends to one other) and traced the cause to the attention mechanism itself; rewrote the hidden layers of a deployed tagger as if-statements on physical jet quantities that reproduce the network's decisions on 94% of jets.</li>
       <li>Deployed transformer models on FPGAs for the CMS Level-1 trigger: quantization-aware training and high-level synthesis to bit-exact RTL, reaching sub-100 ns inference within 10% of the device's logic budget. Hardware-aware neural architecture search with learned resource and latency models (AutoML 2026); quantized recurrent networks for sub-microsecond inference.</li>
       <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
     </ul>
@@ -123,9 +123,9 @@
     <div><span class="org">Amazon Web Services, Fundamental AI Research</span> · New York, NY<br><span class="role">Applied Scientist Intern</span></div>
     <div class="when">Sep 2025 – Dec 2025</div>
     <ul>
-      <li>Studied whether reflective prompt optimizers (GEPA, MIPROv2, APE) improve LLM reasoning or only elicit formatting and memorized facts, with repeated-run statistical testing across GPT-OSS, Claude Sonnet and Qwen3 on AIME, BigBench Extra Hard and HotpotQA.</li>
-      <li>Showed that 16 of 24 BigBench tasks did not improve; nearly all remaining gains came from formatting or memorized context (movie lists, capital cities), with one task showing a reasoning gain.</li>
-      <li>Ablating the memorized context returned accuracy to the formatting-only baseline; stratifying math data by problem type did not help (0 of 272 GEPA prompts improved).</li>
+      <li>Tested whether automatic prompt optimizers (GEPA, MIPROv2, APE), which rewrite an LLM's prompt from its own feedback, improve reasoning or only change output formatting and inject memorized facts.</li>
+      <li>Evaluated each optimized prompt over repeated runs with statistical tests across GPT-OSS, Claude Sonnet and Qwen3 on AIME math, BigBench Extra Hard and HotpotQA.</li>
+      <li>Found no significant accuracy gain on 16 of 24 BigBench tasks; of the 8 that improved, 5 were explained by formatting and 2 by memorized facts, leaving 1 with a reasoning gain. Removing the memorized facts by ablation returned accuracy to baseline.</li>
     </ul>
   </div>
   <div class="item">
@@ -285,7 +285,7 @@
       <img src="assets/figs/distill.png" alt="ROC curves: network vs. distilled formula">
       <div class="body">
         <h3>Distilling jet taggers into physics equations</h3>
-        <p class="small">The latent space of JEDI-linear (FPGA-deployable) and ParT rewritten as if-statements on jet physics quantities. For JEDI-linear, the formulas reproduce the network's decision on 94% of jets and explain 92% of each neuron's variance, versus 16% for an untrained copy.</p>
+        <p class="small">The latent space of JEDI-linear (an FPGA-deployable real-time tagger) and ParT (the Particle Transformer) rewritten as if-statements on jet physics quantities. For JEDI-linear, the formulas reproduce the network's decision on 94% of jets and explain 92% of each neuron's variance, versus 16% for an untrained copy.</p>
         <div class="links"><a class="btn" href="https://aaronw5.github.io/jet-tagger-distillation/" target="_blank" rel="noopener">Live site</a><a class="btn" href="https://github.com/aaronw5/jet-tagger-distillation" target="_blank" rel="noopener">Code</a></div>
       </div>
     </div>
@@ -293,7 +293,7 @@
       <img src="assets/figs/explorer.png" alt="Neuron profile from the JEDI-linear explorer">
       <div class="body">
         <h3>What is the tiny trigger tagger doing?</h3>
-        <p class="small">Every neuron of the quantized JEDI-linear tagger as an exact formula of p<sub>T</sub>, Δη, Δφ, matched to a physics quantity. Sparse autoencoders, transcoders, and decision trees distilled from the network, explorable jet by jet.</p>
+        <p class="small">Every neuron of JEDI-linear, a quantized real-time jet tagger, as an exact formula of p<sub>T</sub>, Δη, Δφ, matched to a physics quantity. Sparse autoencoders, transcoders, and decision trees distilled from the network, explorable jet by jet.</p>
         <div class="links"><a class="btn" href="https://aaronw5.github.io/jedi-linear-explorer/" target="_blank" rel="noopener">Live explorer</a><a class="btn" href="https://github.com/aaronw5/jedi-linear-explorer" target="_blank" rel="noopener">Code</a></div>
       </div>
     </div>
