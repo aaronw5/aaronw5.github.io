@@ -103,7 +103,7 @@
     <ul>
       <li>Research whether LLM agents can follow a wall-clock time budget on long-horizon tasks and use that time effectively, including time in tool calls and code execution that the model cannot measure from its own output.</li>
       <li>Built time-budgeted evaluations in Factorio and MLE-bench; showed agents meet deadlines but use about a quarter of their budget, and that a live clock raises output 77% with no missed deadlines.</li>
-      <li>Trained agents with reinforcement learning (GRPO) and a deadline reward to follow the budget and choose a different strategy for short and long budgets; introduced trajectory grafting; encoded wall-clock time in the model's rotary position embeddings so it can attend to elapsed time directly (on-time completion 6% → 50%).</li>
+      <li>Trained agents with reinforcement learning (GRPO) and a deadline reward to follow the budget and choose a different strategy for short and long budgets; introduced trajectory grafting; added wall-clock time to the model's rotary position embedding (on-time completion 6% → 50%).</li>
       <li>Scaled training to multi-node GPU clusters with hundreds of parallel environments, including a 27B-parameter model trained across AWS regions.</li>
     </ul>
   </div>
@@ -114,7 +114,7 @@
       <li>Member and author of the CMS Collaboration at the CERN Large Hadron Collider.</li>
       <li>Design efficient transformer architectures for real-time jet classification at the LHC trigger: a physics-inspired linear transformer that uses 80% less memory than full attention at matching accuracy, and a hierarchical patch-attention model with geometric message passing that reaches state-of-the-art accuracy among resource-constrained taggers (NeurIPS 2026).</li>
       <li>Built mixture-of-experts particle transformers and showed that routing each particle to a single expert beats a dense model of the same compute on a 188-class jet classification benchmark.</li>
-      <li>Explained what jet-tagging transformers learn: showed that their attention is nearly binary (each particle attends to one other) and traced the cause to the attention mechanism itself; rewrote the hidden layers of a deployed tagger as if-statements on physical jet quantities that reproduce the network's decisions on 94% of jets.</li>
+      <li>Measured attention patterns in jet-tagging transformers: each particle attends to at most one other, and the pattern arises from the attention mechanism rather than the physics-inspired bias term. Rewrote the hidden layers of a deployed tagger as if-statements on physical jet quantities; the formulas reproduce the network's decisions on 94% of jets.</li>
       <li>Deployed transformer models on FPGAs for the CMS Level-1 trigger: quantization-aware training and high-level synthesis to bit-exact RTL, reaching sub-100 ns inference within 10% of the device's logic budget.</li>
       <li>Built a hardware-aware neural architecture search that uses learned models of FPGA resource use and latency to find designs that fit the trigger budget (AutoML 2026).</li>
       <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
@@ -126,7 +126,7 @@
     <ul>
       <li>Tested whether automatic prompt optimizers (GEPA, MIPROv2, APE), which rewrite an LLM's prompt from its own feedback, improve reasoning or only change output formatting and inject memorized facts.</li>
       <li>Evaluated each optimized prompt over repeated runs with statistical tests across GPT-OSS, Claude Sonnet and Qwen3 on AIME math, BigBench Extra Hard and HotpotQA.</li>
-      <li>Found no significant accuracy gain on 16 of 24 BigBench tasks; of the 8 that improved, 5 were explained by formatting and 2 by memorized facts, leaving 1 with a reasoning gain. Removing those facts from the prompt dropped accuracy back to the formatting-only level, confirming they were the source of the gain.</li>
+      <li>Found no significant accuracy gain on 16 of 24 BigBench tasks; of the 8 that improved, 5 were explained by formatting and 2 by memorized facts, leaving 1 with a reasoning gain. Removing those facts from the prompt returned accuracy to the formatting-only level.</li>
     </ul>
   </div>
   <div class="item">
