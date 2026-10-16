@@ -103,7 +103,7 @@
     <ul>
       <li>Research whether LLM agents can follow a wall-clock time budget on long-horizon tasks and use that time effectively, including time in tool calls and code execution that the model cannot measure from its own output.</li>
       <li>Built time-budgeted evaluations in Factorio and MLE-bench; showed agents meet deadlines but use about a quarter of their budget, and that a live clock raises output 77% with no missed deadlines.</li>
-      <li>Trained agents with reinforcement learning (GRPO) and a deadline reward to follow the budget and choose a different strategy for short and long budgets; introduced trajectory grafting; gave the model a built-in sense of elapsed time through its positional embeddings (on-time completion 6% → 50%).</li>
+      <li>Trained agents with reinforcement learning (GRPO) and a deadline reward to follow the budget and choose a different strategy for short and long budgets; introduced trajectory grafting; encoded wall-clock time in the model's rotary position embeddings so it can attend to elapsed time directly (on-time completion 6% → 50%).</li>
       <li>Scaled training to multi-node GPU clusters with hundreds of parallel environments, including a 27B-parameter model trained across AWS regions.</li>
     </ul>
   </div>
