@@ -189,7 +189,7 @@
       <div class="meta"><a class="tag venue" href="https://www.sim2science.com/" target="_blank" rel="noopener">Sim2Sci Workshop @ NeurIPS 2026</a><span class="tag role">First author</span></div>
       <h3>Surrogate Assisted Compact Model Extraction for Commercial CMOS Process Operating at Cryogenic Temperatures</h3>
       <p class="authors"><b>Aaron Wang</b>, et al.</p>
-      <p class="desc">Neural surrogates of transistor I-V curves make compact-model parameter extraction at 77 K a search problem instead of a hand-tuning problem. Every candidate is validated in real circuit simulation. The fits beat the published parameters on all 18 test devices.</p>
+      <p class="desc">Neural network surrogates of transistor current-voltage curves, used to search for compact-model parameters at 77 K with every candidate checked in circuit simulation. The method lowers fitting error against the published parameters on all 18 test devices of an open-source 130 nm process.</p>
       <div class="links"><a class="btn" href="https://github.com/aaronw5/Cryo-Transistor-ML" target="_blank" rel="noopener">Code</a></div>
     </div>
   </article>
@@ -223,7 +223,7 @@
       <div class="meta"><a class="tag venue" href="https://2026.automl.cc/" target="_blank" rel="noopener">AutoML 2026 · Oral</a></div>
       <h3><a href="https://arxiv.org/abs/2605.16138" target="_blank" rel="noopener">SNAC-Pack 2.0: Scaled-Out Surrogate Neural Architecture Codesign</a></h3>
       <p class="authors">Jason Weitz, Dmitri Demler, Benjamin Hawks, <b>Aaron Wang</b>, Nhan Tran, Javier Duarte</p>
-      <p class="desc">An open-source AutoML framework for hardware-aware neural architecture search with end-to-end FPGA deployment. A surrogate model predicts FPGA resources and latency per trial so the multi-objective search never waits on synthesis; quantization-aware training and pruning follow, then hls4ml synthesis. On LHC jet classification and superconducting qubit readout it finds compact Pareto-optimal models and cuts months of manual tuning to hours.</p>
+      <p class="desc">An open-source framework for hardware-aware neural architecture search with FPGA deployment. A surrogate model estimates resource use and latency for each candidate so the search does not wait on synthesis, followed by quantization-aware training, pruning and hls4ml synthesis. On LHC jet classification and superconducting qubit readout it finds compact models on the accuracy-resource Pareto front.</p>
       <div class="links"><a class="btn" href="https://arxiv.org/abs/2605.16138" target="_blank" rel="noopener">arXiv</a><a class="btn" href="https://github.com/fastmachinelearning/nac-opt/tree/automl-2026" target="_blank" rel="noopener">Code</a></div>
     </div>
   </article>
@@ -242,9 +242,9 @@
   <article class="card paper" id="p-salt">
     <img class="fig contain" src="assets/figs/salt.png" alt="Linear attention projection">
     <div class="body">
-      <div class="meta"><span class="tag status">arXiv preprint · 2025</span><span class="tag role">First author</span></div>
+      <div class="meta"><span class="tag status">arXiv preprint · 2025</span><span class="tag role">Co-first author</span></div>
       <h3><a href="https://arxiv.org/abs/2510.23641" target="_blank" rel="noopener">Spatially Aware Linear Transformer (SAL-T) for Particle Jet Tagging</a></h3>
-      <p class="authors"><b>Aaron Wang</b>, Zihan Zhao, Subash Katel, Vivekanand Gyanchand Sahu, Elham E. Khoda, Abhijith Gandrakota, Jennifer Ngadiuba, Richard Cavanaugh, Javier Duarte</p>
+      <p class="authors"><b>Aaron Wang</b>, <b>Zihan Zhao</b>, Subash Katel, Vivekanand Gyanchand Sahu, Elham E. Khoda, Abhijith Gandrakota, Jennifer Ngadiuba, Richard Cavanaugh, Javier Duarte</p>
       <p class="desc">A linear-attention transformer that groups particles into kinematic regions so attention is computed between physically meaningful areas. Matches full-attention transformers at lower latency and resource use; also works on ModelNet10 point clouds.</p>
       <div class="links"><a class="btn" href="https://arxiv.org/abs/2510.23641" target="_blank" rel="noopener">arXiv</a><a class="btn" href="https://github.com/aaronw5/SAL-T4HEP" target="_blank" rel="noopener">Code</a></div>
     </div>
@@ -256,7 +256,7 @@
       <div class="meta"><a class="tag venue" href="https://iopscience.iop.org/journal/2632-2153" target="_blank" rel="noopener">Mach. Learn.: Sci. Technol. 2023</a></div>
       <h3><a href="https://arxiv.org/abs/2207.00559" target="_blank" rel="noopener">Ultra-low latency recurrent neural network inference on FPGAs for physics applications with hls4ml</a></h3>
       <p class="authors">Elham E. Khoda, Dylan Rankin, Rafael Teixeira de Lima, Philip Harris, Scott Hauck, Shih-Chieh Hsu, Michael Kagan, Vladimir Loncar, Chaitanya Paikara, Richa Rao, Sioni Summers, Caterina Vernieri, <b>Aaron Wang</b></p>
-      <p class="desc">Quantized GRU and LSTM layers in hls4ml, with sub-microsecond inference on FPGAs for trigger-level physics applications.</p>
+      <p class="desc">LSTM and GRU layers implemented in the hls4ml framework so recurrent networks can run on FPGAs at the latencies the LHC trigger requires. The designs can be tuned for latency or resource use, and are demonstrated on jet identification models.</p>
       <div class="links"><a class="btn" href="https://arxiv.org/abs/2207.00559" target="_blank" rel="noopener">arXiv</a><a class="btn" href="https://github.com/aaronw5/RNN-HLS4ML-paper" target="_blank" rel="noopener">Code</a></div>
     </div>
   </article>
@@ -266,7 +266,7 @@
       <div class="meta"><a class="tag venue" href="https://www.nature.com/ncomms/" target="_blank" rel="noopener">Nature Communications 2024</a></div>
       <h3><a href="https://doi.org/10.1038/s41467-024-46633-w" target="_blank" rel="noopener">Revealing Fermi surface evolution and Berry curvature in an ideal type-II Weyl semimetal</a></h3>
       <p class="authors">Qianni Jiang, Johanna C. Palmstrom, John Singleton, Shalinee Chikara, David Graf, Chong Wang, Yue Shi, Paul Malinowski, <b>Aaron Wang</b>, Zhong Lin, Lingnan Shen, Xiaodong Xu, Di Xiao, Jiun-Haw Chu</p>
-      <p class="desc">Quantum oscillation and high-field Hall measurements on MnBi<sub>2−x</sub>Sb<sub>x</sub>Te<sub>4</sub> track how the Fermi surface evolves through a type-II Weyl semimetal phase. Contribution from my crystal-growth work in the Quantum Materials Lab at the University of Washington.</p>
+      <p class="desc">Quantum oscillation and high-field Hall measurements on MnBi<sub>2−x</sub>Sb<sub>x</sub>Te<sub>4</sub> resolve how the Fermi surface changes as the Fermi level is tuned through the Weyl nodes, matching the band structure of an ideal type-II Weyl semimetal. Crystal growth for this work was done in the Quantum Materials Lab at the University of Washington.</p>
       <div class="links"><a class="btn" href="https://doi.org/10.1038/s41467-024-46633-w" target="_blank" rel="noopener">Paper</a></div>
     </div>
   </article>
