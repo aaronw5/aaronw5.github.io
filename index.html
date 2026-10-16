@@ -112,8 +112,10 @@
     <div class="when">Jun 2023 – Present</div>
     <ul>
       <li>Member and author of the CMS Collaboration at the CERN Large Hadron Collider.</li>
-      <li>Designed efficient transformer architectures for jet classification, including a physics-inspired linear transformer that uses 80% less memory and runs faster while matching state-of-the-art accuracy.</li>
-      <li>Analyzed attention maps and weight distributions to explain attention sparsity in particle transformers; used the sparsity to improve efficiency.</li>
+      <li>Design efficient transformer architectures for real-time jet classification at the LHC trigger: a physics-inspired linear transformer that uses 80% less memory than full attention at matching accuracy, and a hierarchical patch-attention model with geometric message passing that reaches state-of-the-art accuracy among resource-constrained taggers (NeurIPS 2026).</li>
+      <li>Mixture-of-experts particle transformers: top-1 routing beats a dense baseline at the same forward compute on 188-class jet classification; stored capacity, active compute and routing organization must be evaluated separately.</li>
+      <li>Interpretability of jet taggers: traced near-binary attention in particle transformers to the attention mechanism rather than the interaction matrix; distilled the latent space of FPGA-deployable and transformer taggers into if-statements on jet physics quantities that reproduce the network's decisions on 94% of jets.</li>
+      <li>FPGA deployment of jet taggers for the CMS Level-1 trigger: quantization-aware training (HGQ2) and high-level synthesis via hls4ml and distributed arithmetic (da4ml) to bit-exact RTL; a 64-particle PHAT-JeT design runs at 96.6 ns within 10% of a VU13P. Hardware-aware neural architecture search with surrogate resource models (AutoML 2026); quantized recurrent networks with hls4ml.</li>
       <li>Trained transformer and mixture-of-experts models on 100-million-particle datasets with distributed training at Argonne National Laboratory.</li>
     </ul>
   </div>
